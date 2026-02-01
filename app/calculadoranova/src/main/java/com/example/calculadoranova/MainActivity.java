@@ -8,7 +8,7 @@ import android.widget.*;
 public class MainActivity extends AppCompatActivity {
 
     EditText numero1, numero2;
-    Button btnSomar, btnSubtrair, btnMultiplicar, btnDividir;
+    Button btnSomar, btnSubtrair, btnMultiplicar, btnDividir, btnLimpar; // ✅ adicionei btnLimpar
     TextView resultado;
 
     @Override
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         btnSubtrair = findViewById(R.id.btnSubtrair);
         btnMultiplicar = findViewById(R.id.btnMultiplicar);
         btnDividir = findViewById(R.id.btnDividir);
+        btnLimpar = findViewById(R.id.btnLimpar); // ✅ inicialização do botão Limpar
         resultado = findViewById(R.id.resultado);
 
         btnSomar.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +50,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 calcular('/');
+            }
+        });
+
+        // ✅ Listener do botão Limpar
+        btnLimpar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numero1.setText("");
+                numero2.setText("");
+                resultado.setText("");
             }
         });
     }

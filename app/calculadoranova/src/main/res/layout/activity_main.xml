@@ -61,4 +61,12 @@
         android:text="Resultado: "
         android:textSize="18sp"
         android:layout_marginTop="24dp"/>
+
+    <!-- Botão Limpar -->
+    <Button
+        android:id="@+id/btnLimpar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Limpar"
+        android:layout_marginTop="16dp"/>
 </LinearLayout>
